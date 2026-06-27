@@ -1,4 +1,5 @@
 //ちょわよ
+//ちょわよ
 //#include "header.h"
 #include <stdio.h>
 #include "judge.h"
@@ -44,15 +45,21 @@ void ShowResult(JudgeResult result)
 		case JudgeResult::Hit:
 			printf("ヒット\n");
 			HitCount++;
-			printf("ヒット数: %d\n", HitCount);
 		case JudgeResult::Blow:
 			printf("ブロー\n");
 			BlowCount++;
-			printf("ブロー数: %d\n", BlowCount);
 		case JudgeResult::miss:
 			printf("ヒット数: %d\n", HitCount);
 			printf("ブロー数: %d\n", BlowCount);
 			break;
 		}
+	}
+	if(HitCount == 4)
+	{
+		IsGameClear = true;
+	}
+	else {
+		HitCount = 0;
+		BlowCount = 0;
 	}
 }

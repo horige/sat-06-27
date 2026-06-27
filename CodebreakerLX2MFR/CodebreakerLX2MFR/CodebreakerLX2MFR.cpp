@@ -59,7 +59,7 @@ int main()
 		ShowResult(result14);
 		ShowResult(result15);
 		ShowResult(result16);*/
-		if (result == JudgeResult::Correct)
+		if (IsGameClear)
 		{ // ゲームクリアしたら終了.
 			break;
 		}
