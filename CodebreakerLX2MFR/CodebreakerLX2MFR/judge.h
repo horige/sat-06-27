@@ -2,7 +2,9 @@
 enum class JudgeResult
 {
 	Hit,
-	Blow
+	Blow,
+	miss,
+	clear
 };
 
 // ƒ‰ƒ“ƒ_ƒ€”‚Æ“ü—Í”‚ğ”äŠr.

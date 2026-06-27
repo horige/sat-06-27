@@ -11,9 +11,15 @@
 /// <returns></returns>
 JudgeResult *CompareHitNumber(int *randomNumber, int *playerNumber)
 {
+	printf("乱数: %d\n", *randomNumber);
+	printf("入力数: %d\n", *playerNumber);
 	if (*playerNumber == *randomNumber)
 	{ // 入力数が乱数と一致していたら.
 		return new JudgeResult(JudgeResult::Hit);
+	}
+	else
+	{
+		return new JudgeResult(JudgeResult::miss);
 	}
 }
 
@@ -23,19 +29,30 @@ JudgeResult *CompareBlowNumber(int *randomNumber, int *playerNumber)
 	{ // 入力数が乱数と一致していたら.
 		return new JudgeResult(JudgeResult::Blow);
 	}
+	else
+	{
+		return new JudgeResult(JudgeResult::miss);
+	}
 }
 
 void ShowResult(JudgeResult result)
 {
-	switch (result)
+	for(int i = 0; i < 4; i++)
 	{
-	case JudgeResult::Hit:
-		printf("ヒット\n");
-		HitCount++;
-		break;
-	case JudgeResult::Blow:
-		printf("ブロー\n");
-		BlowCount++;
-		break;
+		switch (result)
+		{
+		case JudgeResult::Hit:
+			printf("ヒット\n");
+			HitCount++;
+			printf("ヒット数: %d\n", HitCount);
+		case JudgeResult::Blow:
+			printf("ブロー\n");
+			BlowCount++;
+			printf("ブロー数: %d\n", BlowCount);
+		case JudgeResult::miss:
+			printf("ヒット数: %d\n", HitCount);
+			printf("ブロー数: %d\n", BlowCount);
+			break;
+		}
 	}
 }
