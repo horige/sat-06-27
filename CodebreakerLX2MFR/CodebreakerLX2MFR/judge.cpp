@@ -3,6 +3,7 @@
 //#include "header.h"
 #include <stdio.h>
 #include "judge.h"
+bool IsGameClear = false;
 
 /// <summary>
 /// C++—ñ‹“Œ^Ql: https://af-e.net/cpp-enum-class/

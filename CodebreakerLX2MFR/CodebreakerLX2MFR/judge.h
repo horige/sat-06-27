@@ -4,6 +4,7 @@ enum class JudgeResult
 	Hit,
 	Blow,
 	miss,
+	clear
 };
 
 // ƒ‰ƒ“ƒ_ƒ€”‚Æ“ü—Í”‚ğ”äŠr.
@@ -16,5 +17,3 @@ static int BlowCount;
 
 // Œ‹‰Ê‚ğ•\¦.
 void ShowResult(JudgeResult result);
-
-bool IsGameClear = false;
